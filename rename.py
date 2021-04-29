@@ -15,23 +15,13 @@ psg.theme('Reddit')
 numbers = re.compile(r'(\d+)') # Regex to get the index of the file?
 layout = [
     [psg.Text('Path to files')],
-    [psg.Input(key="teste", change_submits=True), psg.FolderBrowse()],
+    [psg.Input(key="-folder_browse-", change_submits=True), psg.FolderBrowse()],
     [psg.Text('Common name for the files')],
-    [psg.Input(key="teste1")],
+    [psg.Input(key="-common_name-")],
     [psg.Text('Extension of the files')],
-    [psg.Input("Erase this and let empty to keep the extension or change here to the extension you want", key="teste2")],
+    [psg.Input("", key="-extension-")],
     [psg.Button('Rename'), psg.Button('Cancel')],
     [psg.Output(size = (50, 5), key="-output-")]
-]
-
-layout1 = [
-    [psg.Text("Path to files: Select the path which contains the files that you want to change the name and/or the extension")],
-    [psg.Text("Commom name for the files: The name you want the files to have")],
-    [psg.Text("Extension of the files: The extension you want the files to have")],
-    [psg.Text("")],
-    [psg.Text("If you want to change only the extension, let the 'Common name for the files' empty")],
-    [psg.Text("If you want to change only the name, let the 'Extension of the files' empty")],
-    [psg.Button('Back')]
 ]
 
 # What the script does
@@ -81,11 +71,8 @@ while True:
     if event == psg.WIN_CLOSED or event == 'Cancel':
         break
     if event == 'Rename':
-        rename(values["teste"], values["teste1"], values["teste2"])
+        rename(values['-folder_browse-'], values['-common_name-'], values['-extension-'])
         print('{0} {1} {0}'.format('='*10, 'END'))
-        values["teste"] = ''
-        values["teste1"] = ''
-        values["teste2"] = ''
 
 window.close()
 
