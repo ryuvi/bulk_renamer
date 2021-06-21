@@ -25,7 +25,7 @@ On the app, if you want to rename all the files and their extensions, just fill 
 
 ## Download
 
-You can [download](https://github.com/ryuvi/Multiple-Files-Renamer/releases/tag/1.0.0) the latest stable version of Markdownify for Windows, macOS and Linux.
+You can [download](https://github.com/ryuvi/Multiple-Files-Renamer/releases/tag/1.0.0) the latest stable version of Multiple Files Renamer for Windows and Linux.
 
 ## Credits
 
