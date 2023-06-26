@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+# [requires]
+# python_version = '3.9'
+
+[scripts]
+start = "python bulk_renamer/interface/IMain.py"
+interface = "python bulk_renamer/interface/IMain.py"
+backend = "python bulk_renamer/backend/BMain.py"
+
+[packages]
+ttkthemes = "*"
